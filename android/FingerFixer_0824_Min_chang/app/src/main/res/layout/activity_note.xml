@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/note_toolbar1"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:contentInsetStart="0dp"
+            app:contentInsetStart="0dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/button_back"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/button_back"
+                    android:onClick="backButtonOnClick"/>
+
+                <TextView
+                    android:id="@+id/song_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="Song Name"
+                    android:textSize="45sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/mainColor"/>
+
+                <TextView
+                    android:id="@+id/bt_state2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dip"
+                    android:textColor="@color/Gray"/>
+
+                <ImageView
+                    android:id="@+id/status_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/note_toolbar2"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/Gray"
+        android:contentInsetStart="0dp"
+        app:contentInsetStart="0dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:checkedButton="@+id/radio_button_normal">
+
+                <RadioButton
+                    android:id="@+id/radio_button_normal"
+                    android:layout_width="130dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="@dimen/icon_margin"
+                    android:button="@null"
+                    android:text="기본연주"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/selector_toolbar2"
+                    android:background="@drawable/radio_button"/>
+
+                <RadioButton
+                    android:id="@+id/radio_button_auto"
+                    android:layout_width="130dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="@dimen/radio_button_margin"
+                    android:button="@null"
+                    android:text="자동연주"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/selector_toolbar2"
+                    android:background="@drawable/radio_button"/>
+
+            </RadioGroup>
+
+
+            <ImageButton
+                android:id="@+id/button_stop"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="@dimen/icon_margin"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_stop"
+                android:onClick="stopButtonOnClick"/>
+
+            <ImageButton
+                android:id="@+id/button_play"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="@dimen/icon_margin"
+                android:layout_toLeftOf="@id/button_stop"
+                android:layout_centerVertical="true"
+                android:background="@drawable/fab_play"
+                android:onClick="playButtonOnClick"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/note_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_below="@id/note_toolbar1"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_level1"/>
+
+
+    </RelativeLayout>
