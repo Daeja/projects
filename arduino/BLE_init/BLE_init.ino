@@ -1,3 +1,4 @@
+// For arduino mega 2560
 void setup() 
 {
   Serial.begin(9600);   //시리얼모니터
